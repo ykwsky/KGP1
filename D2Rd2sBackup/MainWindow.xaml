@@ -1,0 +1,31 @@
+﻿<Window x:Class="D2RCharacterCopy.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:D2RCharacterCopy"
+        mc:Ignorable="d"
+        Title="D2R d2s Backup" Height="200" Width="300"
+        ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Text="Select the d2s file."/>
+        <TextBox Grid.Row="1" Grid.Column="0" Width="200" HorizontalAlignment="Left"  Name="FilePathTextBox" IsReadOnly="True" Margin="10 10 0 10"/>
+        <Button Grid.Row="1" Grid.Column="1" Name="FileSelectBt" Content="File Select" Click="SelectFile_Click" Margin="10 5 10 5"/>
+        <Button Grid.Row="2" Grid.ColumnSpan="2" Name="BackupBt"  Content="Backup" Click="Backup_Click" Margin="10 0 10 5"/>
+        <TextBox Name="BackupDirResult" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Width="250" HorizontalAlignment="Left" Margin="10 10 0 0"/>
+        <Button Name="DirBt" Content=".." Click="Dir_Click" Grid.Row="3" Grid.Column="1" Width="20" HorizontalAlignment="Right" Margin="0 10 10 0"/>
+        <TextBox Name="BackupResult" Grid.Row="4" Grid.ColumnSpan="2" Margin="10 0 10 0"/>
+    </Grid>
+</Window>
