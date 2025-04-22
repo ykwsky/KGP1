@@ -1,1 +1,9 @@
-﻿/.vs/KGP1
+﻿**/.vs/**
+**/bin/**
+**/obj/**
+**/Debug/**
+**/Release/**
+**/Release
+**/packages/**
+*.filters
+*.user
